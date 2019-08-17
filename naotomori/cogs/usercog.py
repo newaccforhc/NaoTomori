@@ -215,7 +215,7 @@ class UserCog(commands.Cog):
         """
         await ctx.send(error.args[0])
 
-    @tasks.loop(seconds=30)
+    @tasks.loop(minutes=30)
     async def updateMalProfileLoop(self):
         """
         Loop that periodically updates the MAL account, i.e. update watching/reading list.
